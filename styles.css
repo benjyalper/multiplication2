@@ -90,6 +90,7 @@ button {
 
     h1,
     h2 {
-        min-width: 330px;
+        min-width: 525px;
+        text-align: center;
     }
 }
