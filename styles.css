@@ -82,6 +82,8 @@ button {
     /* border: 2px solid #0079FF; */
     border: 2px solid #0079FF;
     border-radius: 10px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 @media (max-width: 1400px) {
