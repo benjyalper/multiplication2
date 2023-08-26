@@ -4,13 +4,17 @@ $(".grid-container").on("submit", ".answer-form", function (event) {
     const submittedAnswer = $(this).find("input").val();
     const correctAnswer = $(this).data("answer");
     const gridItem = $(this).closest('.grid-item');
+    const audioCorrect = new Audio("success-1-6297.mp3");
+    const audioWrong = new Audio("wah-wah-sad-trombone-6347.mp3");
 
     if (submittedAnswer === correctAnswer.toString()) {
         gridItem.addClass('animate__flipInY');
         gridItem.css('background-color', '#00DFA2').css('color', '#FF0060').css('border', '3px solid #0079FF');
         gridItem.text(correctAnswer).css("font-size", "25px");
+        audioCorrect.play();
     } else {
         handleIncorrectResponse(gridItem, correctAnswer);
+        audioWrong.play();
     }
 });
 
